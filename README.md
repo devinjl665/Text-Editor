@@ -6,11 +6,11 @@ The task is to build a text editor that runs in the browser. The app will be a s
 
 ## Demo
 
+<a href="">Text Editor Demo Video</a>
+
+## Installation
 
 
-## Site Link
-
-<a href="">Deployed Site</a>
 
 ## Usage
 
@@ -75,3 +75,7 @@ THEN I should have my static assets pre cached upon loading along with subsequen
 WHEN I deploy to Render
 
 THEN I should have proper build scripts for a webpack application
+
+## Contact Me
+
+Email: [devinjl665@gmail.com](mailto:devinjl665@gmail.com?subject=[GitHub]%20Source%20Han%20Sans)
