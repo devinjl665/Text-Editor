@@ -18,12 +18,47 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Webpack Plugin',
+      }),
+
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
+      new WebpackPwaManifest({
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E',
+        description: 'A progressive web app that functions as a text editor.',
+        theme_color: "#2fa322",
+        background_color: '#2fa322',
+        orientation: "portrait",
+        display: "standalone",
+        start_url: './',
+        publicPath: './',
+
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512], 
+            destination: path.join('assets', 'icons')
+          },
+        ],
+        fingerprints: false
+      })
+
+
     ],
 
     module: {
       rules: [
-        
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        }, 
       ],
     },
   };
