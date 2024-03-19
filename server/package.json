@@ -4,11 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start:dev": "",
-        "server": "",
-        "build": "",
-        "install": "",
-        "client": ""
+        "server": "nodemon server.js --ignore client"
     },
     "keywords": [],
     "author": "",
