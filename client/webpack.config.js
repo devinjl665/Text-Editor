@@ -37,8 +37,6 @@ module.exports = () => {
         description: 'A progressive web app that functions as a text editor.',
         theme_color: "#2fa322",
         background_color: '#2fa322',
-        orientation: "portrait",
-        display: "standalone",
         start_url: './',
         publicPath: './',
 
