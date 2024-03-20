@@ -31,12 +31,12 @@
       "type": "image/png"
     }
   ],
-  "name": "Just Another Text Editor",
-  "short_name": "JATE",
+  "name": "Editor",
+  "short_name": "edit",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./",
-  "description": "A progressive web app that functions as a text editor.",
-  "theme_color": "#2fa322",
-  "background_color": "#2fa322"
+  "description": "Edit your stuff here.",
+  "background_color": "#225ca3",
+  "theme_color": "#225ca3"
 }

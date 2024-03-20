@@ -6,19 +6,36 @@ The task is to build a text editor that runs in the browser. The app will be a s
 
 ## Demo
 
+<a href="https://jate-text-editor-fwzd.onrender.com">Deployed App Link</a>
+
+
 <a href="">Text Editor Demo Video</a>
+
+
+### Manifest JSON:
+![alt text](assets/manifest.png)
+
+### Service Worker:
+![alt text](assets/service-worker.png)
+
+### IndexedDB:
+![alt text](assets/indexedDB.png)
 
 ## Installation
 
+After you follow the link, press the `install` button. 
 
+If you want to run app locally, clone code and enter the command `npm start` into app's integrated terminal. You may need to run `npm install` before starting to install any dependencies needed for this app to function.
+
+You will need Node.js, express, IndexedDB, webpack, concurrently, @babel, css-loader, and style-loader. All of these can be found at the <a href="https://www.npmjs.com/">npmjs</a> website
 
 ## Usage
 
-
+This application is pretty straightfoward. Enter what you want in the text field, if you click off the application that data will be saved and stored. When you click the install button it will download an extension to your browser allowing you to use the application even when offline.
 
 ## Credits
 
-
+The starter code was provided by Wash U in Saint Louis Coding Bootcamp. I implemented the code to allow the application to work. I authored this code with the help of the bootcamp's coursework, Stack Overflow, and W3Schools. Also, referred to Render documentation to get my application to deploy.
 
 ## User Story
 

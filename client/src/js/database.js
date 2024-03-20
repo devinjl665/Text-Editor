@@ -14,27 +14,41 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 
-export const putDb = async (id, content) => {
-    console.log ('PUT to databse');
-    const textDB = await openDB('jate', 1);
-    const tx = textDB.transaction('jate', 'readwrite');
-    const store = tx.objectStore('jate');
-    const request = store.put({ id: id, todo: content });
-    const result = await request;
-    console.log('Data saved to the database', result);
-  };
+export const putDb = async (content) => {
+  
+  console.log("Save to the database!");
 
+  const textDB = await openDB('jate', 1); // create connection
+
+  const tx = textDB.transaction('jate', 'readwrite'); // create transaction and specify database
+
+  const store = tx.objectStore('jate'); // open store
+
+  const request = store.put({ content });
+
+  const result = await request;
+  console.log('Data saved to the database', result);
+};
 // TODO: Add logic for a method that gets all the content from the database
 
 export const getDb = async () => {
-    console.log('GET all from database');
-    const textDB = await openDB('jate', 1);
-    const tx = textDB.transaction('jate', 'readonly');
-    const store = tx.objectStore('jate');
-    const request = store.getAll();
-    const result = await request;
-    console.log('result.value', result);
-    return result;
-  };
+  
+  console.log('Get stuff from the database');
+
+  const textDB = await openDB('jate', 1); // create connection
+
+  const tx = textDB.transaction('jate', 'readonly'); // create transaction and specify database
+
+  const store = tx.objectStore('jate'); // open store
+
+  const request = store.getAll(); 
+
+  const result = await request;
+
+  console.log('result.value', result);
+
+  return result;
+}; 
+
 
 initdb();
