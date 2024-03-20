@@ -14,41 +14,53 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 
+// Function to save content to the database
 export const putDb = async (content) => {
-  
   console.log("Save to the database!");
 
-  const textDB = await openDB('jate', 1); // create connection
+  // Open a connection to the 'jate' database with version 1
+  const textDB = await openDB('jate', 1);
 
-  const tx = textDB.transaction('jate', 'readwrite'); // create transaction and specify database
+  // Create a read-write transaction for the 'jate' object store
+  const tx = textDB.transaction('jate', 'readwrite');
 
-  const store = tx.objectStore('jate'); // open store
+  // Open the 'jate' object store
+  const store = tx.objectStore('jate');
 
+  // Put the content into the store
   const request = store.put({ content });
 
+  // Wait for the put operation to complete
   const result = await request;
   console.log('Data saved to the database', result);
 };
+
 // TODO: Add logic for a method that gets all the content from the database
 
+// Function to get all content from the database
 export const getDb = async () => {
-  
   console.log('Get stuff from the database');
 
-  const textDB = await openDB('jate', 1); // create connection
+  // Open a connection to the 'jate' database with version 1
+  const textDB = await openDB('jate', 1);
 
-  const tx = textDB.transaction('jate', 'readonly'); // create transaction and specify database
+  // Create a read-only transaction for the 'jate' object store
+  const tx = textDB.transaction('jate', 'readonly');
 
-  const store = tx.objectStore('jate'); // open store
+  // Open the 'jate' object store
+  const store = tx.objectStore('jate');
 
-  const request = store.getAll(); 
+  // Get all the data from the store
+  const request = store.getAll();
 
+  // Wait for the getAll operation to complete
   const result = await request;
 
   console.log('result.value', result);
 
   return result;
-}; 
+};
+
 
 
 initdb();

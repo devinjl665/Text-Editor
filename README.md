@@ -9,7 +9,7 @@ The task is to build a text editor that runs in the browser. The app will be a s
 <a href="https://jate-text-editor-fwzd.onrender.com">Deployed App Link</a>
 
 
-<a href="">Text Editor Demo Video</a>
+<a href="https://drive.google.com/file/d/1ENb3GHDnWAcMLYvz12Jlnci7SB8uSO1g/view?usp=drive_link">Text Editor Demo Video</a>
 
 
 ### Manifest JSON:
